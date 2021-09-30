@@ -75,8 +75,10 @@ h_hotspot_api = "https://api.helium.io/v1/hotspots/"
 # Use the hotspot address within the array
 hotspots = ["0000000000000000001111111111111111111111111111111111"]
 
-for hs in hotspots:
-    getOraclePrice()
+# Pull the most recent Oracle price
+getOraclePrice()
+
+for hs in hotspots:  
     getHotspotStatus(h_hotspot_api, hs)
     getHotspotRewards(h_hotspot_api, hs)
 
